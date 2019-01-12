@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>SharkTank - Search</title>
+</head>
+<style>
+    h3{
+        padding-left: 5%;
+        color: rgb(37, 37, 37);
+    }
+    .inst{
+        font-size: small;
+        color: red;
+    }
+    .container{
+        margin-buttom: 4%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 10%;
+        display: block;
+        background-color: rgb(240, 236, 230);
+        font-family: sans-serif;
+    }
+    .cblock{
+        margin-left: 3%;
+        margin-right: 3%;
+        display: block;
+        background-color: rgb(235, 223, 223);
+    }
+    .row{
+        padding-left: 35%;
+    }
+    .heading{
+        padding-left: 40%;
+    }
+    .bs{
+        margin-left: 7%;
+        width: 25%;
+        height: 5%;
+    }
+    .form-control{
+        font-size:small;
+    }
+    .form-box{
+        margin-left: 10%;
+        font-size: small;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="cblock"><br>
+        <div class="heading">
+            <h3>Shark Tank - Search </h3><br>
+            <label class="inst">*Filter using any combination of inputs</label>
+        </div>
+        <div class="row" style="margin-top:20px">
+            <div class="col-md-12">
+                <form role="form" action="" method="POST">
+                    <div class="form-group">
+                        <label for="cname">Company Name</label>
+                        <input class="form-control" name="cname" placeholder=" ">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="season">Season</label>
+                        <select class="form-control" name="season">
+                            <option value="" disabled selected>Select Season</option>
+                            <option value="1">Season 01</option>
+                            <option value="2">Season 02</option>
+                            <option value="3">Season 03</option>
+                            <option value="4">Season 04</option>
+                            <option value="5">Season 05</option>
+                            <option value="6">Season 06</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="author">Category</label>
+                        <select class="form-control" name="category">
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Food and Beverage">Food and Beverage</option>
+                            <option value="Business Services">Business Services</option>
+                            <option value="Lifestyle / Home">Lifestyle / Home</option>
+                            <option value="Fitness / Sports">Fitness / Sports</option>
+                            <option value="Children / Education">Children / Education</option>
+                            <option value="Consumer Products">Consumer Products</option>
+                            <option value="Fashion / Beauty">Fashion / Beauty</option>
+                            <option value="Media / Entertainment">Media / Entertainment</option>
+                            <option value="Software / Tech">Software / Tech</option>
+                            <option value="Pet Products">Pet Products</option>
+                            <option value="Green / Clean Tech">Green / Clean Tech</option>
+                            <option value="Uncertain / Other">Uncertain / Other</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="deal">Deal</label>
+                        <select class="form-control" name="deal">
+                            <option value="" disabled selected>Select Option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="nosharks">Investing Sharks</label>
+                        <select class="form-control" name="nosharks">
+                            <option value="" disabled selected>Select</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="sharks">Sharks</label><br>
+                        <div class="form-box">
+                        <input class="form-control" name="sharks" type="radio" value="corcoran"/>Corcoran<br>
+                        <input class="form-control" name="sharks" type="radio" value="cuban"/>Cuban<br>
+                        <input class="form-control" name="sharks" type="radio" value="greiner"/>Greiner<br>
+                        <input class="form-control" name="sharks" type="radio" value="herjavec"/>Herjavec<br>
+                        <input class="form-control" name="sharks" type="radio" value="john"/>John<br>
+                        <input class="form-control" name="sharks" type="radio" value="oleary"/>O'Leary<br>
+                        <input class="form-control" name="sharks" type="radio" value="harrington"/>Harrington<br>
+                        <input class="form-control" name="sharks" type="radio" value="guest"/>Guest<br>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="gender">Entrepreneur Gender</label>
+                        <select class="form-control" name="gender">
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Mixed team">Mixed team</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="amount">Invested Amount $</label>
+                        <input class="form-control" name="amount" placeholder="0">
+                    </div><br><br>
+                    <button type="submit" name="submit" class="bs" value="Form sent!">Submit</button>
+                </form><br>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
