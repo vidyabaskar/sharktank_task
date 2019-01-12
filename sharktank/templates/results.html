@@ -43,6 +43,9 @@ li{
     <title>Shark Tank</title>
 </head>
 <body>
+<form role="form" action="" method="GET">
+    <button type="submit" name='back' class="bis" value="Going back">< Back</button>
+</form>
 <h2 style="margin-left: 47%;">Results</h2>
 <table id="employees" style="width:100%">
     {% if result %}
@@ -60,13 +63,13 @@ li{
     {% endfor %}
     {% endif %}
 </table><br>
+<label style="color: red; margin-left: 25%; font-size:small">*Note: Amount, Equity, Amount per shark and Total value in Brief Description will be displayed only if you search by investors</label>
 <ul>
     {% if result %}
     {% for row in result %}
         <h2>Brief Description</h2><br>
         <li><strong>Company Name:</strong> {{ row[1] }}</li>
         <li><strong>Category:</strong> {{ row[4] }}</li>
-        <li><strong>Season premiered:</strong> {{ row[12] }}</li>
         <li><strong>Episode premiered:</strong> {{ row[2] }}</li>
         <li><strong>Entrepreneur Gender:</strong> {{ row[7] }}</li>
         <li><strong>Deal status:</strong> {{ row[3] }}</li>

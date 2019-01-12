@@ -142,18 +142,54 @@ def search():
                         rs.append(j)
                 rs = tuple(rs)
 
+            return render_template('results.html',result=rs)
 
-        return render_template('results.html',result=rs)
-        # Compnay name:
-        # Season:
-        # Episode premiered:
-        # Entrepreneur Gender:
-        # Deal status:
-        # Number of Inverstors:
-        # Amount:
-        # Equity:
-        # Amount per shark:
-        # Total value:
+
+        elif cat2:
+            t = list()
+            cur.execute(
+                '''SELECT eid,company,episode,deal,category,numsharks,notes,gender,equity,amountpershark,totalvalue,amount 
+                        from season01 natural join companydetails natural join sharks natural join dealprojects where ''' + cat2 + '>0')
+            rs = cur.fetchall()
+            cur.execute(
+                '''SELECT eid,company,episode,deal,category,numsharks,notes,gender,equity,amountpershark,totalvalue,amount 
+                        from season02 natural join companydetails natural join sharks natural join dealprojects where ''' + cat2 + '>0')
+            r = cur.fetchall()
+            r = list(r)
+            t.append(r)
+            cur.execute(
+                '''SELECT eid,company,episode,deal,category,numsharks,notes,gender,equity,amountpershark,totalvalue,amount 
+                        from season03 natural join companydetails natural join sharks natural join dealprojects where ''' + cat2 + '>0')
+            r = cur.fetchall()
+            r = list(r)
+            t.append(r)
+            cur.execute(
+                '''SELECT eid,company,episode,deal,category,numsharks,notes,gender,equity,amountpershark,totalvalue,amount f
+                        from season04 natural join companydetails natural join sharks natural join dealprojects where ''' + cat2 + '>0')
+            r = cur.fetchall()
+            r = list(r)
+            t.append(r)
+            cur.execute(
+                '''SELECT eid,company,episode,deal,category,numsharks,notes,gender,equity,amountpershark,totalvalue,amount 
+                        from season05 natural join companydetails natural join sharks natural join dealprojects where ''' + cat2 + '>0')
+            r = cur.fetchall()
+            r = list(r)
+            t.append(r)
+            cur.execute(
+                '''SELECT eid,company,episode,deal,category,numsharks,notes,gender,equity,amountpershark,totalvalue,amount 
+                        from season06 natural join companydetails natural join sharks natural join dealprojects where ''' + cat2 + '>0')
+            r = cur.fetchall()
+            r = list(r)
+            t.append(r)
+            rs = list(rs)
+            for i in t:
+                for j in i:
+                    rs.append(j)
+            rs = tuple(rs)
+            return render_template('results.html', result=rs)
+
+        else:
+            abort(404)
 
     else:
        abort(404)
